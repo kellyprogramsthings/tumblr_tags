@@ -131,7 +131,10 @@ foreach ($posts as $post) {
 }
 
 //print_r($postCollection);
-writePostToDatabase($db, $postCollection[0]);
+
+foreach ($postCollection as $post) {
+	writePostToDatabase($db, $post);
+}
 
 ?>
 
